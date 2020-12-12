@@ -1,0 +1,44 @@
+//- Слайдер
+
+mixin slider-card(data)
+  .swiper-slide
+    +b.slider-card
+      +e.img
+        img(src='./img/' + data.img alt="")
+      +e.info
+        +e.title!=data.name
+        +e.text!=data.text
+
+//- Слайдер инфраструктуры
+
+mixin infrastructure-card(data)
+  .swiper-slide
+    .s-infrastructure-card(style="background-image: url(../img/"+ data.img +");")
+      +b.s-infrastructure-card__overlay
+      .s-infrastructure-card__content
+        .s-infrastructure-card__top
+          +e.subtitle.color-white!=data.subtitle
+          +e.H2.title.color-white!=data.title
+        +b.s-infrastructure-card__bottom
+          +e.bottom-title!=data.bottomTitle
+          +e.bottom-text!=data.bottomText
+
+//- Слайдер команды на главной
+
+mixin command-card(data)
+  .swiper-slide
+    +b.s-command-slider__item
+      +e.name!=data.name
+      +e.descr
+        +e.img
+          img.fluid-img(src='./img/' + data.img alt="")
+        +e.info
+          +e.content
+            +e.title!=data.title
+            +e.text!=data.text
+          +b.info-block
+            +e.item
+              +e.title Подробнее
+              +e.line
+              +e.btn
+                +e.BUTTON.link.icon-more-horizontal.openModal(type="button", data-target!=data.modal)
