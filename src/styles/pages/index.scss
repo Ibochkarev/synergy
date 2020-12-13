@@ -313,6 +313,7 @@
     }
 }
 .s-vacancies {
+    margin-bottom: 20px;
     .section__title {
         font-size: 48px;
         line-height: 56px;
@@ -430,10 +431,6 @@
     .vacancy-card {
         width: calc(100% / 2 - 10px);
     }
-}
-
-.s-partners {
-    margin-bottom: 80px;
 }
 
 .s-partners__content {
