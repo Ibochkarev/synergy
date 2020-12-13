@@ -376,6 +376,7 @@
     }
     &:hover {
         background-color: #f85969;
+        border: 1px solid #f85969;
         .vacancy-card__label {
             background: rgba(255, 255, 255, 0.1);
             color: #fff;
@@ -432,4 +433,89 @@
 }
 
 .s-partners {
+    margin-bottom: 80px;
+}
+
+.s-partners__content {
+    position: relative;
+}
+.partners-slider {
+    &__item {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 60px;
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.partners-nav {
+    position: relative;
+    max-width: 160px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+    @media (max-width: 768px) {
+        margin: 19px auto;
+    }
+    .owl-prev,
+    .owl-next {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 100%;
+        background: #a8abc1;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        bottom: 33px;
+        outline: none;
+        @media (max-width: 768px) {
+            bottom: 50px;
+        }
+    }
+    .owl-prev {
+        float: left;
+    }
+    .owl-next {
+        float: right;
+    }
+}
+
+.partners-slider__dots {
+    position: relative;
+    text-align: center;
+    max-width: 160px;
+    margin: 0 auto;
+    -webkit-tap-highlight-color: transparent;
+
+    .owl-dot {
+        display: inline-block;
+        zoom: 1;
+        outline: none;
+        span {
+            width: 8px;
+            height: 8px;
+            margin: 5px 4px;
+            background: #a8abc1;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity 0.2s ease;
+            border-radius: 30px;
+        }
+
+        &.active span,
+        &:hover span {
+            background: #181940;
+        }
+    }
 }

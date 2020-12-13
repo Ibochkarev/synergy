@@ -23,6 +23,10 @@ mixin info-card(data)
         +e.IMG.icon(src='./img/' + data.icon alt="")
     +e.text!=data.text
 
+mixin partners-slide(data)
+  .partners-slider__item.slide(data-slide-index!=data.id)
+    img.partners-slider__image(src='./img/' + data.logo alt="name")
+
 block content
   +b.content
     +b.SECTION.s-main.section
@@ -181,3 +185,130 @@ block content
       .wrapper
         .section__content
           h2.section__title Наши партнёры
+        +e.content
+          +b.partners-slider.owl-carousel.owl-theme
+            +partners-slide({
+              id: "0",
+              logo: "logo-0.svg"
+            })
+            +partners-slide({
+              id: "1",
+              logo: "logo-1.svg"
+            })
+            +partners-slide({
+              id: "2",
+              logo: "logo-2.svg"
+            })
+            +partners-slide({
+              id: "3",
+              logo: "logo-3.svg"
+            })
+            +partners-slide({
+              id: "4",
+              logo: "logo-4.svg"
+            })
+            +partners-slide({
+              id: "5",
+              logo: "logo-5.svg"
+            })
+            +partners-slide({
+              id: "6",
+              logo: "logo-6.svg"
+            })
+            +partners-slide({
+              id: "7",
+              logo: "logo-7.svg"
+            })
+            +partners-slide({
+              id: "8",
+              logo: "logo-8.svg"
+            })
+            +partners-slide({
+              id: "9",
+              logo: "logo-9.svg"
+            })
+            +partners-slide({
+              id: "10",
+              logo: "logo-10.svg"
+            })
+            +partners-slide({
+              id: "11",
+              logo: "logo-11.svg"
+            })
+            +partners-slide({
+              id: "12",
+              logo: "logo-12.svg"
+            })
+            +partners-slide({
+              id: "13",
+              logo: "logo-13.svg"
+            })
+            +partners-slide({
+              id: "14",
+              logo: "logo-14.svg"
+            })
+            +partners-slide({
+              id: "15",
+              logo: "logo-15.svg"
+            })
+            +partners-slide({
+              id: "16",
+              logo: "logo-1.svg"
+            })
+            +partners-slide({
+              id: "17",
+              logo: "logo-2.svg"
+            })
+            +partners-slide({
+              id: "18",
+              logo: "logo-3.svg"
+            })
+            +partners-slide({
+              id: "19",
+              logo: "logo-4.svg"
+            })
+            +partners-slide({
+              id: "20",
+              logo: "logo-5.svg"
+            })
+            +partners-slide({
+              id: "21",
+              logo: "logo-6.svg"
+            })
+            +partners-slide({
+              id: "22",
+              logo: "logo-7.svg"
+            })
+            +partners-slide({
+              id: "23",
+              logo: "logo-8.svg"
+            })
+            +partners-slide({
+              id: "24",
+              logo: "logo-9.svg"
+            })
+            +partners-slide({
+              id: "25",
+              logo: "logo-10.svg"
+            })
+            +partners-slide({
+              id: "26",
+              logo: "logo-11.svg"
+            })
+            +partners-slide({
+              id: "27",
+              logo: "logo-12.svg"
+            })
+            +partners-slide({
+              id: "28",
+              logo: "logo-13.svg"
+            })
+            +partners-slide({
+              id: "29",
+              logo: "logo-14.svg"
+            })
+            +partners-slide({
+              id: "30",
+              logo: "logo-15.svg"
+            })
+          .partners-nav
