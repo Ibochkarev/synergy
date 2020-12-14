@@ -60,6 +60,20 @@ p {
     &:not(:last-child) {
         margin-bottom: 20px;
     }
+    @media (min-width: 576px) and (max-width: 991px) {
+        font-size: 18px;
+        line-height: 27px;
+        &:not(:last-child) {
+            margin-bottom: 23px;
+        }
+    }
+    @media (min-width: 992px) {
+        font-size: 18px;
+        line-height: 27px;
+        &:not(:last-child) {
+            margin-bottom: 23px;
+        }
+    }
 }
 
 .lift {
