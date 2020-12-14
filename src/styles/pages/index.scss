@@ -1,13 +1,21 @@
-.s-main {
+.first-section {
     padding-bottom: 0;
     .section__title {
         font-size: 36px;
         line-height: 40px;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
+    }
+    .section__introtext {
+        margin-bottom: 41px;
+    }
+    img {
+        width: 100%;
+        height: 197px;
+        object-fit: cover;
     }
 }
 @media (min-width: 768px) {
-    .s-main {
+    .first-section {
         padding-bottom: 0;
         .section__title {
             font-size: 72px;
@@ -17,7 +25,7 @@
     }
 }
 @media (min-width: 1200px) {
-    .s-main {
+    .first-section {
         .section__title {
             margin-bottom: 48px;
         }
@@ -31,8 +39,9 @@
     }
 }
 
-.s-info {
+.info {
     background: #f3f6fd;
+    padding-top: 48px;
     &__nav {
         display: flex;
         flex-direction: row;
@@ -86,12 +95,15 @@
                 position: relative;
                 list-style-type: none;
                 padding-inline-start: 20px;
+                &:not(:last-child) {
+                    margin-bottom: 33px;
+                }
                 &::before {
                     padding-right: 20px;
                     content: '';
                     position: absolute;
-                    top: 0;
-                    left: -16px;
+                    top: -3px;
+                    left: -12px;
                     width: 16px;
                     height: 32px;
                     background-image: url('../img/marker.svg');
@@ -101,10 +113,18 @@
         }
         .overlay-img {
             margin-bottom: 64px;
+            img {
+                width: 100%;
+                height: 186px;
+                object-fit: cover;
+            }
         }
     }
     &__info {
         margin-bottom: 36px;
+    }
+    &__card-list {
+        margin-bottom: 48px;
     }
     &__subtitle {
         font-size: 18px;
@@ -120,6 +140,7 @@
             &[href^='tel:'] {
                 color: #181940;
                 font-size: 18px;
+                margin-top: 18px;
                 display: block;
             }
             &:hover {
@@ -129,7 +150,7 @@
     }
 }
 @media (min-width: 768px) {
-    .s-info {
+    .info {
         &__nav {
             margin-bottom: 64px;
         }
@@ -162,7 +183,7 @@
     }
 }
 @media (min-width: 1200px) {
-    .s-info {
+    .info {
         padding-top: 64px;
         padding-bottom: 64px;
         &__panel {
@@ -190,8 +211,10 @@
 .info-card {
     background: #ffffff;
     border-radius: 4px;
-    padding: 36px 30px;
-    margin-bottom: 48px;
+    padding: 46px 30px 36px;
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
     &__icon {
         max-width: 60%;
         max-height: 70%;
@@ -234,6 +257,10 @@
         }
     }
 }
+.working {
+    padding-top: 52px;
+    padding-bottom: 54px;
+}
 
 .working-card {
     &:not(:last-child) {
@@ -263,12 +290,12 @@
         margin-bottom: 24px;
     }
     &__text {
-        font-size: 16px;
+        font-size: 17px;
         line-height: 22px;
     }
 }
 @media (min-width: 768px) {
-    .s-working {
+    .working {
         padding-bottom: 88px;
         &__list {
             display: flex;
@@ -296,7 +323,7 @@
 }
 
 @media (min-width: 1200px) {
-    .s-working {
+    .working {
         padding-bottom: 16px;
     }
     .working-card {
@@ -312,11 +339,19 @@
         }
     }
 }
-.s-vacancies {
+.vacancies {
+    padding-top: 64px;
     padding-bottom: 20px;
     .section__title {
         font-size: 48px;
-        line-height: 56px;
+        line-height: 38px;
+    }
+    .section__introtext {
+        margin-bottom: 36px;
+        p {
+            font-size: 18px;
+            line-height: 27px;
+        }
     }
     &__list {
         margin-bottom: 36px;
@@ -389,7 +424,7 @@
         }
     }
     &__body {
-        padding: 20px;
+        padding: 19px 26px 19px 19px;
     }
     &__label {
         background-color: rgba(248, 89, 105, 0.1);
@@ -423,7 +458,7 @@
     }
 }
 @media (min-width: 768px) {
-    .s-vacancies__list {
+    .vacancies__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -433,24 +468,26 @@
     }
 }
 
-.s-partners__content {
+.partners {
+    padding-top: 52px;
+    .section__title {
+        margin-bottom: 33px;
+    }
+}
+.partners__content {
     position: relative;
 }
 .partners-slider {
     &__item {
-        height: 90px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 60px;
-        @media (max-width: 768px) {
-            margin-bottom: 30px;
-        }
+        height: 40px;
+        margin-bottom: 37px;
     }
 
     &__image {
+        height: 100%;
         max-width: 100%;
-        height: auto;
+        margin: 0 auto;
+        width: auto !important;
     }
 }
 
@@ -492,7 +529,7 @@
     position: relative;
     text-align: center;
     max-width: 160px;
-    margin: 0 auto;
+    margin: 25px auto 0;
     -webkit-tap-highlight-color: transparent;
 
     .owl-dot {

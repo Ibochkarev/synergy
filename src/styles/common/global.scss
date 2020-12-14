@@ -55,10 +55,10 @@ h2 {
 }
 
 p {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 22px;
     &:not(:last-child) {
-        margin-bottom: 24px;
+        margin-bottom: 20px;
     }
 }
 
@@ -154,23 +154,17 @@ p {
 }
 
 .section {
-    padding-top: 52.75px;
+    padding-top: 58px;
     padding-bottom: 48px;
     &__title {
         color: #244cc8;
         font-size: 28px;
         line-height: 32px;
         font-weight: 700;
-        margin-bottom: 36px;
+        margin-bottom: 45px;
     }
     &__introtext {
         margin-bottom: 36px;
-        p {
-            margin-bottom: 18px;
-            &::last-child {
-                margin-bottom: 0;
-            }
-        }
     }
 }
 @media (min-width: 768px) {

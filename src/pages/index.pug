@@ -29,7 +29,7 @@ mixin partners-slide(data)
 
 block content
   +b.content
-    +b.SECTION.s-main.section
+    +b.SECTION.first-section.section
       .wrapper
         +e.col
           h1.section__title Центр карьеры
@@ -40,7 +40,7 @@ block content
           .overlay-img
             img.fluid-img(src="./img/s-main-img.jpg", alt="Центр карьеры")
 
-    +b.SECTION.s-working.section
+    +b.SECTION.working.section
       .wrapper
         h2.section__title Как мы работаем?
         +e.list
@@ -75,14 +75,14 @@ block content
             text: "Проводим оценку навыков по ведущим методикам и повышаем требуемые работодателем компетенции"
           })
 
-    +b.s-info.section
+    +b.info.section
       .wrapper
         +e.tabs
           +e.nav
-            +e.A.tab.s-info__tab-1.active(href="#tab1") Cтудентам
-            +e.A.tab.s-info__tab-2(href="#tab2") Работодателям
+            +e.A.tab.info__tab-1.active(href="#tab1") Cтудентам
+            +e.A.tab.info__tab-2(href="#tab2") Работодателям
           +e.content
-            +e#tab1.panel.s-info__panel-1.active
+            +e#tab1.panel.info__panel-1.active
               +e.H2.panel-title Студенты «Синергии» могут совмещать учебу с работой уже с начала обучения
               ul
                 li Для студентов очного отделения мы готовы предложить индивидуальные графики обучения, работу в режиме неполного рабочего дня в вечернее время и трудоустройство по окончанию Университет
@@ -109,7 +109,7 @@ block content
                 |
                 |
                 a(href="mailto:career@synergy.ru") career@synergy.ru
-            +e#tab2.panel.s-info__panel-2
+            +e#tab2.panel.info__panel-2
               +e.H2.panel-title Что мы предлагаем?
               +e.panel-introtext
                 p Центр карьеры Университета «Синергия» — это надежный источник квалифицированных специалистов для самых разных отраслей.
@@ -133,14 +133,14 @@ block content
               +e.text По вопросам согласования вакансий и подбора кандидатов на сайте обращайтесь по телефону
                 |
                 |
-                a(href="tel:+78001000011") 8 800 100‒00‒11 (доб. 2059)
+                +e.A.phone(href="tel:+78001000011") 8 800 100‒00‒11 (доб. 2059)
                 |
                 | или по адресу
                 |
                 |
                 a(href="mailto:career@synergy.ru") career@synergy.ru
 
-    +b.SECTION.s-vacancies.section
+    +b.SECTION.vacancies.section
       .wrapper
         h2.section__title Вакансии
         .section__introtext
@@ -158,13 +158,13 @@ block content
           })
           +vacancy-card({
             label: "Продажи",
-            title: "Менеджер по работе с клиентами (прямые продажи)",
-            sum: "от 90 000"
+            title: "Руководитель отдела продаж",
+            sum: "до 110 000"
           })
           +vacancy-card({
             label: "Продажи",
-            title: "Руководитель отдела продаж",
-            sum: "до 110 000"
+            title: "Менеджер по работе с клиентами (прямые продажи)",
+            sum: "от 90 000"
           })
           +vacancy-card({
             label: "Продажи",
@@ -181,7 +181,7 @@ block content
             span
             | Все вакансии
 
-    +b.SECTION.s-partners.section
+    +b.SECTION.partners.section
       .wrapper
         .section__content
           h2.section__title Наши партнёры
