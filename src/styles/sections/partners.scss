@@ -1,0 +1,107 @@
+.partners {
+    padding-top: 52px;
+    .section__title {
+        margin-bottom: 33px;
+    }
+}
+.partners__content {
+    position: relative;
+}
+.partners-slider {
+    &__item {
+        height: 40px;
+        margin-bottom: 37px;
+    }
+
+    &__image {
+        height: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        width: auto !important;
+    }
+}
+
+.partners-nav {
+    position: relative;
+    max-width: 160px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+    @media (max-width: 991px) {
+        margin: 19px auto;
+    }
+    .owl-prev,
+    .owl-next {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 100%;
+        background: #a8abc1;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        bottom: 33px;
+        outline: none;
+        @media (max-width: 991px) {
+            bottom: 50px;
+        }
+    }
+    .owl-prev {
+        float: left;
+    }
+    .owl-next {
+        float: right;
+    }
+}
+
+.partners-slider__dots {
+    position: relative;
+    text-align: center;
+    max-width: 160px;
+    margin: 25px auto 0;
+    -webkit-tap-highlight-color: transparent;
+
+    .owl-dot {
+        display: inline-block;
+        zoom: 1;
+        outline: none;
+        span {
+            width: 8px;
+            height: 8px;
+            margin: 5px 4px;
+            background: #a8abc1;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity 0.2s ease;
+            border-radius: 30px;
+        }
+
+        &.active span,
+        &:hover span {
+            background: #181940;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+    .partners {
+        .section__title {
+            margin-bottom: 56px;
+        }
+        &-slider__item {
+            height: 55px;
+            margin-bottom: 64px;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .partners {
+        .section__title {
+            margin-bottom: 70px;
+        }
+        &-slider__item {
+            height: 55px;
+            margin-bottom: 58px;
+        }
+    }
+}

@@ -1,0 +1,150 @@
+.vacancies {
+    padding-top: 64px;
+    padding-bottom: 20px;
+    .section__title {
+        font-size: 48px;
+        line-height: 38px;
+    }
+    .section__introtext {
+        margin-bottom: 36px;
+        p {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+    &__list {
+        margin-bottom: 36px;
+    }
+    &__button {
+        background-color: #fff;
+        border: 1px solid #cfd1df;
+        color: #181940;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 48px;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        width: 199px;
+
+        span {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            &::before {
+                content: '';
+                position: absolute;
+                left: -5px;
+                top: 0;
+                width: 24px;
+                height: 24px;
+                background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2225%22%20height%3D%2224%22%20viewBox%3D%220%200%2025%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M7.5%2017L17.5%207%22%20stroke%3D%22%23181940%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%0A%3Cpath%20d%3D%22M7.5%207H17.5V17%22%20stroke%3D%22%23181940%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%0A%3C/svg%3E%0A');
+                background-repeat: no-repeat;
+            }
+        }
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.vacancy-card {
+    background-color: #fff;
+    border: 1px solid #cfd1df;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 213px;
+    width: 100%;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    &:hover {
+        background-color: #f85969;
+        border: 1px solid #f85969;
+        .vacancy-card__label {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+        .vacancy-card__title,
+        .vacancy-card__income,
+        .vacancy-card__sum {
+            color: #fff;
+        }
+    }
+    &__body {
+        padding: 19px 26px 19px 19px;
+    }
+    &__label {
+        background-color: rgba(248, 89, 105, 0.1);
+        border-radius: 3px;
+        color: #f85969;
+        display: block;
+        padding: 2px 6px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        width: min-content;
+    }
+    &__title {
+        color: #181940;
+        display: block;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+    }
+    &__footer {
+        border-top: 1px solid #cfd1df;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 12px 20px;
+    }
+    &__income {
+        color: #666a87;
+        margin-right: 10px;
+    }
+    &__sum {
+        color: #181940;
+    }
+}
+@media (min-width: 576px) {
+    .vacancies {
+        .section__title {
+            margin-bottom: 44px;
+        }
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+    .vacancies {
+        padding-top: 74px;
+        padding-bottom: 68px;
+    }
+    .vacancy-card {
+        width: calc(100% / 2 - 10px);
+    }
+}
+
+@media (min-width: 992px) {
+    .vacancies {
+        padding-top: 90px;
+        padding-bottom: 54px;
+    }
+    .vacancy-card {
+        width: calc(100% / 3 - 10px);
+    }
+}

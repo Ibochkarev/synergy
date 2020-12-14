@@ -1,0 +1,101 @@
+.working {
+    padding-top: 52px;
+    padding-bottom: 54px;
+}
+
+.working-card {
+    &:not(:last-child) {
+        margin-bottom: 48px;
+    }
+    &__icon {
+        max-width: 60%;
+        max-height: 70%;
+        width: auto;
+        height: auto;
+
+        &-wrap {
+            background: #f3f6fd;
+            border-radius: 100%;
+            margin-bottom: 36px;
+            width: 54px;
+            height: 54px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        margin-bottom: 24px;
+    }
+    &__text {
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+@media (min-width: 576px) {
+    .working__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .working-card {
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .working {
+        padding-top: 64px;
+        padding-bottom: 88px;
+    }
+    .working-card {
+        width: calc(100% / 2 - 20px);
+        &:not(:last-child) {
+            margin-bottom: 64px;
+        }
+        &__icon {
+            &-wrap {
+                width: 64px;
+                height: 64px;
+                margin-bottom: 40px;
+            }
+        }
+        &__title {
+            margin-bottom: 22px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .working {
+        padding-bottom: 16px;
+        .section__title {
+            margin-bottom: 66px;
+        }
+    }
+    .working-card {
+        width: calc(100% / 3 - 25px);
+        &:not(:last-child) {
+            margin-bottom: 64px;
+        }
+        &__text {
+            padding-right: 45px;
+        }
+        &__icon {
+            &-wrap {
+                width: 72px;
+                height: 72px;
+            }
+        }
+    }
+}
