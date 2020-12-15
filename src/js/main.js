@@ -1,14 +1,22 @@
-$('.s-info__tab').click(function (event) {
-    event.preventDefault()
-    let tab = $('.s-info__tab.active').attr('href')
-    let activeTab = $('.s-info__tab.active')
-    activeTab.removeClass('active')
-    $(this).addClass('active')
-    $(tab).removeClass('active')
-    $(tab).addClass('hide')
-    const tabContent = $(this).attr('href')
-    $(tabContent).removeClass('hide')
-    $(tabContent).addClass('active')
+const _tabs = document.querySelectorAll('[data-tab]')
+const _content = document.getElementsByClassName('active')
+
+const toggleContent = function () {
+    if (!this.classList.contains('active')) {
+        Array.from(_content).forEach((item) => {
+            item.classList.remove('active')
+        })
+
+        this.classList.add('active')
+
+        let currentTab = this.getAttribute('data-tab'),
+            _tabContent = document.getElementById(currentTab)
+        _tabContent.classList.add('active')
+    }
+}
+
+Array.from(_tabs).forEach((item) => {
+    item.addEventListener('click', toggleContent)
 })
 
 $(document).ready(function () {

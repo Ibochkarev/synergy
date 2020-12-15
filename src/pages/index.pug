@@ -78,9 +78,11 @@ block content
     +b.info.section
       .wrapper
         +e.tabs
-          +e.nav
-            +e.A.tab.info__tab-1.active(href="#tab1") Cтудентам
-            +e.A.tab.info__tab-2(href="#tab2") Работодателям
+          +e.UL#tabs.nav
+            +e.LI.tab.active(data-tab="tab1")
+              +e.A.tab-link(href="#tab1") Cтудентам
+            +e.LI.tab(data-tab="tab2")
+              +e.A.tab-link(href="#tab2") Работодателям
           +e.content
             +e#tab1.panel.info__panel-1.active
               +e.H2.panel-title Студенты «Синергии» могут совмещать учебу с работой уже с начала обучения

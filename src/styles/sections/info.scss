@@ -20,13 +20,15 @@
         white-space: nowrap;
         &.active {
             background: #244cc8;
-            color: #ffffff;
+            a {
+                color: #ffffff;
+            }
         }
-        &-1 {
+        &:first-child {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
         }
-        &-2 {
+        &:nth-child(2) {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
         }
